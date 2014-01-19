@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------
+// * [Base Styles]
+// * 
+// * @project Suave Ghost Theme
+// * @version 1.0.0
+// * 
+// * @author Dwi A. Hambali <dwi@aestik.com>
+// * @author Pratama H. Salahudin <pratama@aestik.com>
+// -----------------------------------------------------------------
+
+body{
+    background-color: @default-background;
+
+    color: @default-text;
+    font-family: @font-1;
+    font-size: @body-fz-md;
+    font-weight: 400;
+    line-height: @line-height-med;
+    text-rendering: optimizeLegibility;
+}
+
+body.suave{
+    margin-top: 74px;
+}
+
+a{
+    color: @default-accent;
+    &:hover{
+        color: darken(@default-accent, 30%);
+        text-decoration: none;
+    }
+}
+
+.container {
+    position: relative;
+    &.full {
+        max-width: 100%;
+        overflow: hidden;
+
+        padding: 0px;
+        text-align: center;
+    }
+}
+
+#wrapper {
+    position: relative;
+    z-index: 99;
+}
+
+header {
+    position: relative;
+    z-index: 100;
+}

@@ -1,0 +1,16 @@
+[must updates]
+- update doc
+
+[future]
+- cover image/featured image on post page.
+- featured image/featured image on index along side excerpt. 
+
+
+[DONE]
+- ABOUT THE AUTHOR title kurang margin top [DONE]
+- disquss [DONE]
+- featured post. figure out how to put this on top of the page (klo ga bisa pake badge/unik style) [DONE]
+- author info [DONE]
+- static page (page.hbs) [DONE]
+- menu untuk static page (harus hardcode) [DONE]
+

@@ -1,0 +1,118 @@
+// -----------------------------------------------------------------
+// * [Button Styles]
+// * 
+// * @project Suave Ghost Theme
+// * @version 1.0.0
+// * 
+// * @author Dwi A. Hambali <dwi@aestik.com>
+// * @author Pratama H. Salahudin <pratama@aestik.com>
+// -----------------------------------------------------------------
+
+/* [Bootstrap Override]
+-------------------------------------------------------------------*/
+.btn{
+    background-color: transparent;
+    
+    padding: 3px 15px;
+    margin-top: -2px;
+
+    font-size: @body-fz-md;
+    font-weight: 500;
+    letter-spacing: @ls-wd;
+    line-height: @line-height-wide;
+
+    transition: all .8s ease;
+    &:hover {
+        background-color: transparent;
+
+        transition: all .8s ease;
+    }
+    &:focus, &.focus,
+    &:active, &.active{
+        margin-top: 0px;
+
+        box-shadow: none;
+    }
+    .button-colorscheme(@btn-default, @btn-default);
+
+    //*-----[Button Primary]-----*/
+    &.btn-default {
+        .button-colorscheme(@btn-default, @btn-default);
+    }
+    
+    //*-----[Button Primary]-----*/
+    &.btn-primary{
+        .button-colorscheme(@btn-primary, @btn-primary);
+    }
+    
+    //*-----[Button Link]-----*/
+    &.btn-link{
+        .button-colorscheme(@btn-link, @btn-link);
+        border: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    //*-----[Button CTA]-----*/
+    &.btn-cta {
+        .button-colorscheme(@default-background, @default-background);
+        border-left: 1px solid @btn-primary;
+        
+        padding: 0 10px;
+
+        font-size: @body-fz-md;
+        font-weight: 500;
+        line-height: @line-height-wide;
+        text-transform: uppercase;
+        &:hover{
+            background-color : transparent;
+            border: 1px solid @btn-primary;
+
+            color: @btn-primary;
+        }
+
+        //*-----[Responsive 768++]-----*/
+        @media screen and (min-width: 768px) {
+            padding: 0 30px;
+
+            font-size: @body-fz-lg;
+            line-height: @line-height-xwide;
+        }
+    }
+
+    //*-----[Button Large]-----*/
+    &.btn-lg{
+        padding: 0 10px;
+
+        font-size: @body-fz-md;
+        font-weight: 500;
+        line-height: @line-height-wide;
+        //*-----[Responsive 768++]-----*/
+        @media screen and (min-width: 768px) {
+            padding: 0 30px;
+
+            font-size: @body-fz-lg;
+            line-height: @line-height-xwide;
+        }
+    }
+    
+    //*-----[Button Small]-----*/
+    &.btn-sm {
+        padding: 0 10px;
+
+        font-size: @body-fz-sm;
+        font-weight: 500;
+        line-height: @line-height-med;
+    }
+    
+    //*-----[Button Extra Small]-----*/
+    &.btn-xs {
+        padding: 2px 5px;
+
+        font-size: @body-fz-us;
+        font-weight: 500;
+        line-height: @line-height-narrow;
+    }
+
+}

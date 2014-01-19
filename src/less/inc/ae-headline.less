@@ -1,0 +1,125 @@
+// -----------------------------------------------------------------
+// * [Headline Styles]
+// * 
+// * @project Suave Ghost Theme
+// * @version 1.0.0
+// * 
+// * @author Dwi A. Hambali <dwi@aestik.com>
+// * @author Pratama H. Salahudin <pratama@aestik.com>
+// -----------------------------------------------------------------
+
+/* [Headline Style]
+-------------------------------------------------------------------*/
+
+.headline{
+    display: none;
+    overflow: hidden;
+
+    margin-top: -74px;
+
+    position: relative;
+    z-index: 0;
+    .container {
+        &.full {
+            left: 0px;
+            position: fixed;
+            right: 0px;
+        }
+    }
+}
+
+/* [Image Cover Style]
+-------------------------------------------------------------------*/
+.image {
+    &.covered {
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* [The Overall Section of Covered Image Content]
+-------------------------------------------------------------------*/
+.hero{
+    &.unit {
+        background-color: @default-accent;
+
+        padding: 30px 0;
+        margin-bottom: 30px;
+
+        font-weight: normal;
+
+        //*-----[Responsive 600++]-----*/
+        @media screen and (min-width: 600px) and (max-width: 767px){
+            // margin-top: 0px !important;
+            padding: 10px 0;
+        }
+
+        //*-----[Responsive 768++]-----*/
+        @media screen and (min-width: 768px) {
+            padding: 50px 0;
+        }
+
+        .post.date {
+            color: lighten(@default-accent, 35%);
+        }
+
+        h1{
+            width: 80%;
+
+            margin: 0px auto 30px;
+
+            color: @default-background;
+            font-family: @font-2;
+            font-size: @heading-hero-fz/1.7;
+            font-weight: 100;
+            line-height: 36px;
+
+            //*-----[Responsive 600++]-----*/
+            @media screen and (min-width: 600px) {
+                font-size: @heading-hero-fz/2;
+            }
+
+            //*-----[Responsive 768++]-----*/
+            @media screen and (min-width: 768px) {
+                font-size: @heading-hero-fz;
+                line-height: 60px;
+            }
+
+            a {
+                color: @default-background;
+                &:hover {
+                    color: lighten(@default-accent, 35%);
+                }
+            }
+        }
+
+        p{
+            margin-bottom: 40px;
+            margin-top: 20px;
+
+            color: lighten(@default-accent, 35%);
+            font-family: @font-2;
+            font-weight: 300;
+            font-size: @body-fz-lg;
+            line-height: @line-height-med;
+
+            //*-----[Responsive 600++]-----*/
+            @media screen and (min-width: 600px) {
+                margin-bottom: 20px;
+                margin-top: 10px;
+
+                line-height: @line-height-med;
+            }
+
+            //*-----[Responsive 768++]-----*/
+            @media screen and (min-width: 768px) {
+                width: 60%;
+                margin: 0px auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,390 @@
+// -----------------------------------------------------------------
+// * [Navbar Styles]
+// * 
+// * @project Suave Ghost Theme
+// * @version 1.0.0
+// * 
+// * @author Dwi A. Hambali <dwi@aestik.com>
+// * @author Pratama H. Salahudin <pratama@aestik.com>
+// -----------------------------------------------------------------
+
+/* [Bootstrap Override]
+-------------------------------------------------------------------*/
+.nav {
+    > li {
+        .inlineDisplay();
+        @media screen and (min-width: 600px) {
+            display: block;
+        }
+    }
+}
+
+.navbar {
+    min-height: 30px;
+    
+    border-radius: 0px;
+    // box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+    &.main-navigation{
+        left: 0;
+        right: 0;
+
+        &.navbar-absolute-bottom{
+            position: absolute;
+        }
+    }
+
+    //*-----[Responsive 768++]-----*/
+    @media screen and (min-width: 768px) {
+        min-height: 50px;
+        > .container {
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+    }
+}
+
+.navbar-default {
+    background-color: darken(@invert-background,5%);
+    border: 0px;
+    .navbar-brand {
+        color: @default-accent;
+        &:hover {
+            color: @default-background;
+        }
+    }
+    .navbar-nav {
+        float: none !important;
+
+        margin-bottom: 0px;
+        margin-top: 0px;
+
+        text-align: center;
+
+        //*-----[Responsive 768++]-----*/
+        @media screen and (min-width: 600px) {
+            float: right !important;
+
+            text-align: left;
+        }
+
+        //*-----[Responsive 768++]-----*/
+        @media screen and (min-width: 600px) and (max-width: 767px) {
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        > li {
+            > a {
+                color: @default-background;
+                &:hover,
+                &:focus {
+                    color: @default-accent;
+                }
+            }
+        }
+        li:hover > a{
+            color: @default-accent;
+        }
+        > .active > a{
+            background-color: transparent;
+
+            color: @default-accent;
+            &:hover {
+                background-color: transparent;
+
+                color: @default-accent;
+            }
+        }
+        > .dropup {
+            &.open > .dropdown-toggle{
+                background: none;
+            }
+        }
+        > .open {
+            > a {
+                &:hover,
+                &:focus, 
+                &.focus, 
+                &:active, 
+                &.active {
+                    background-color: transparent;
+                
+                    color: @default-accent;
+                }
+            }
+            .dropdown-menu {
+                > li {
+                    > a {
+                        color: @default-background;
+                        &:hover {
+                            background-color: @default-accent;
+                            color: @default-background;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-transparent {
+    background-color: fade(@invert-background, 50%);
+}
+
+.navbar-header {
+    //*-----[Responsive 768++]-----*/
+    @media screen and (min-width: 600px) {
+        float: left;
+    }
+}
+
+.navbar-brand {
+    float: none;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    font-family: @font-3;
+    font-size: @heading-3-fz;
+    font-weight: 400;
+    letter-spacing: @ls-nr;
+    line-height: 50px;
+    text-shadow: none;
+    > img {
+        height: 40px;
+        width: 38px;
+
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+        vertical-align: middle;
+        
+        //*-----[Responsive 768++]-----*/
+        @media screen and (min-width: 768px) {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+
+    //*-----[Responsive 768++]-----*/
+    @media screen and (min-width: 768px) {
+        font-size: @heading-3-fz;
+        line-height: 30px;
+    }
+}
+
+.brand-tagline {
+    .inlineDisplay();
+
+    float: none !important;
+    overflow: hidden;
+
+    max-width: 45%;
+
+    margin-top: 10px;
+
+    color: @muted-color;
+    font-size: @body-fz-sm;
+    line-height: 40px;
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+    //*-----[Responsive 600++]-----*/
+    @media screen and (min-width: 600px) {
+        max-width: 60%;
+    }
+    //*-----[Responsive 768++]-----*/
+    @media screen and (min-width: 768px) {
+        max-width: 100%;
+
+        margin-top: 0px;
+    }
+}
+
+.navbar-toggle {
+    padding: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: @base-radius;
+}
+
+.navbar-nav {
+    > li{
+        margin: 0 0 0 20px;
+        //*-----[Responsive 600++]-----*/
+        @media screen and (min-width: 600px) {
+            float: left;
+
+            margin: 0 0 0 50px ;
+
+            white-space: nowrap;
+        }
+        //*-----[Responsive 768++]-----*/
+        @media screen and (min-width: 600px) and (max-width: 767px) {
+            margin: 0 0 0 30px ;
+        }
+        > a{
+            padding: 0;
+
+            font-size: @body-fz-xs;
+            font-family: @font-3;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 40px;
+        }
+
+        &.dropdown{
+            &.open > .dropdown-toggle{
+                background: none;
+            }
+        }
+        &.dropdown,
+        &.dropup {
+            i {
+                margin-left: 5px;
+            }
+        }
+        > .dropdown-menu {
+            &:before,
+            &:after {
+                border: 0px;
+            }
+        }
+    }
+}
+
+.navbar .nav > li {
+    .dropdown-menu {
+        opacity: 0;
+        margin-top: -20px;
+    }
+    &.open > .dropdown-menu{
+        margin-top: 15px;
+
+        opacity: 1;
+        .transition(~'margin 0.3s ease');
+        //*-----[Responsive 768++]-----*/
+        @media screen and (max-width: 767px) {
+            background-color: @invert-background;
+
+            max-width: 100%;
+
+            left: 40px;
+            position: absolute;
+            bottom: 40px;
+
+            margin-bottom: 0px;
+            margin-left: -40px;
+            margin-top: 0px;
+        }
+        @media screen and (min-width: 600px) and (max-width: 767px) {
+            left: 0px;
+        }
+
+        li {
+           //*-----[Responsive 768++]-----*/
+            @media screen and (max-width: 767px) {
+                background-color: @invert-background;
+            } 
+        }
+    }
+
+}
+
+.drop {
+    &.nav {
+        i {
+            .inlineDisplay();        
+            margin-top: 12px;
+
+            font-size: 16px;
+        }
+    }
+    &.menu {
+        position: absolute;
+        top: 5px;
+        right: 25px;
+        margin-right: -10px;
+        i {
+            font-size: 24px;
+        }
+        //*-----[Responsive 600++]-----*/
+        @media screen and (min-width: 600px) {
+            position: relative;
+            top: -3px;
+            right: 0px;
+            margin-right: 0px;
+        }
+    }
+}
+
+.droppable {
+    &.nav {
+        background-color: fade(@default-accent, 95%);
+        display: none;
+
+        bottom: 0px;
+        left:0px;
+        position: fixed;
+        right: 0px;
+        top:0px;
+        z-index: 99;
+
+
+        height: 100%;
+        width: auto;
+
+        padding: 100px 0px 0px;
+
+        color: @default-background;
+        text-align: center;
+
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+
+        .content-divider {
+            border-color: lighten(@default-accent, 20%);
+            .stretched {
+                background-color: lighten(@default-accent, 30%);
+            }
+        }
+
+        .pagination {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 170px;
+            //*-----[Responsive 600++]-----*/
+            @media screen and (min-width: 600px) {
+                width: 60%;
+            }
+        }
+
+        .featured {
+            .badge {
+                .inlineDisplay();
+                background-color: @default-background;
+                border: 0;
+
+                left: 0;            
+                position: relative;
+                top: 4px;
+
+                color:@default-accent;
+                font-weight: 300;
+
+                border-radius: @base-radius;
+            }
+        } 
+
+    }
+}
+
+
+.navbar-collapse {
+    border-top: 0px;
+
+    box-shadow: none;
+}

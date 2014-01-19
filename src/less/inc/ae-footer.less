@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------
+// * [Footer Styles]
+// * 
+// * @project Suave Ghost Theme
+// * @version 1.0.0
+// * 
+// * @author Dwi A. Hambali <dwi@aestik.com>
+// * @author Pratama H. Salahudin <pratama@aestik.com>
+// -----------------------------------------------------------------
+
+footer {
+	background-color: @invert-background;
+
+	position:relative;
+
+	padding-bottom: 20px;
+    padding-top: 20px;
+
+	color: @invert-text;
+    font-size: @body-fz-xs;
+    text-align: center;
+    
+    a{
+        color: @invert-accent;
+        &:hover{
+            color: mix(@invert-accent, @invert-background, 75%);
+        }
+    }
+} 

@@ -1,0 +1,422 @@
+// -----------------------------------------------------------------
+// * [Posts Styles]
+// * 
+// * @project Suave Ghost Theme
+// * @version 1.0.0
+// * 
+// * @author Dwi A. Hambali <dwi@aestik.com>
+// * @author Pratama H. Salahudin <pratama@aestik.com>
+// -----------------------------------------------------------------
+
+.post {
+    position: relative;
+    header {
+        position: relative;
+
+        h1 {
+            margin-top: 0px;
+
+            font-size: @heading-1-fz/1.2;
+            line-height: @line-height-xwide/1.2;
+
+            //*-----[Responsive 768++]-----*/
+            @media screen and (min-width: 768px) {
+                font-size: @heading-1-fz;
+                line-height: @line-height-xwide
+            }
+        }
+    }
+
+    .badge {
+        display: none;
+    }
+
+    &.featured {
+        .badge {
+            .inlineDisplay();
+            background-color: @default-accent;
+            border: 0;
+
+            left: 0;            
+            position: absolute;
+            top: -20px;
+
+            font-weight: 300;
+            border-radius: @base-radius;
+            //*-----[Responsive 768++]-----*/
+            @media screen and (min-width: 768px) {
+                left: -15%;            
+                top: 3px;
+            }
+            @media screen and (min-width: 992px) {
+                left: -12%;            
+            }
+            @media screen and (min-width: 1200px) {
+                left: -10%;            
+            }
+        }
+
+        .meta {
+            .badge {
+                .inlineDisplay();
+                left: 0;            
+                position: relative;
+                top: 3px;
+                margin-right: 5px;
+            }
+        }
+    } 
+
+    img {
+        max-width: 100%;
+
+        margin-bottom: 10px;
+
+        border-radius: @base-radius;
+    }
+
+    &.container {
+        padding: 70px 30px 30px;
+
+        text-align: left;
+        //*-----[Responsive 600++]-----*/
+        @media screen and (min-width: 600px) {
+            padding: 30px 50px;
+        }
+        //*-----[Responsive 768++]-----*/
+        @media screen and (min-width: 768px) {
+            padding: 70px 50px 100px;
+        }
+        //*-----[Responsive 900++]-----*/
+        @media screen and (min-width: 992px) {
+            padding: 70px 0px 100px;
+        }
+    }
+
+    &.icon {
+        .inlineDisplay();
+        background-color: @default-accent;
+
+        position: absolute;
+        right: 100%;
+        top: 30px;
+
+        padding: 10px;
+
+        color: @default-background;
+        font-size: @body-fz-md;
+
+        border-radius: @base-radius;
+        //*-----[Responsive 768++]-----*/
+        @media screen and (min-width: 768px) {
+            left: -50px;
+            right: auto;
+            top: 37px;
+        }
+    }
+
+    &.meta {
+        display: block;
+    
+        color: @muted-color;
+        font-size: @body-fz-sm;
+        
+        span {
+            .inlineDisplay();
+        }
+        .badge {
+            display: none;
+        }
+    }
+
+    &.date {
+        .inlineDisplay();
+
+        font-size: @body-fz-xs;
+        white-space: nowrap;
+    }
+
+    &.item {
+        &.nav {
+            width: 80%;
+            margin: 0px auto 30px;
+
+            //*-----[Responsive 600++]-----*/
+            @media screen and (min-width: 600px) {
+                width: 90%;
+            }
+
+            h3 {
+                width: 100%;
+
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0px;
+
+                font-size: @heading-2-fz;
+                font-weight: 100;
+                line-height: @line-height-wide;
+                a {
+                    color: @default-background;
+                    &:hover {
+                        color: lighten(@default-accent, 35%);
+                    }
+                }
+                //*-----[Responsive 600++]-----*/
+                @media screen and (min-width: 600px) {
+                    width: 80%;
+
+                    font-size: @heading-1-fz/1.4;
+                    line-height: @line-height-xwide/1.4;
+                }
+                //*-----[Responsive 768++]-----*/
+                @media screen and (min-width: 768px) {
+                    width: 80%;
+
+                    font-size: @heading-1-fz;
+                    line-height: @line-height-xwide;
+                }
+            }
+            p {
+                width: 100%;
+
+                margin-left: auto;
+                margin-right: auto;
+
+                color: lighten(@default-accent, 35%);
+                line-height: @line-height-med;
+                //*-----[Responsive 600++]-----*/
+                @media screen and (min-width: 600px) {
+                    width: 60%;
+                }
+            }
+
+            .date {
+                color: lighten(@default-accent, 35%);
+            }
+        }
+    }
+
+    .avatar {
+        &.small {
+            height: 40px;
+            width: 40px;
+            
+            margin-bottom: 0px;
+            margin-right: 10px;
+        }
+    }
+
+    &.excerpt {
+        &.container {
+            background-color: @default-background;
+            border-bottom: 1px solid lighten(@muted-color, 25%);
+
+            max-width: 100%;
+
+            margin-bottom: 0px;
+            padding: 0px;
+
+            font-weight: normal;
+
+            header {
+                .clearfix();
+
+                width: 60%;
+
+                margin: 50px auto;
+            }
+
+            a {
+                color: @heading-color;
+                &:hover {
+                    color: @default-accent;
+                }
+            }
+        }
+    }
+    &.the {
+        &.content {
+            font-size: @body-fz-lg;
+            line-height: @line-height-med;
+            //*-----[Responsive 768++]-----*/
+            @media screen and (min-width: 768px) {
+                font-size: @body-fz-md;
+                line-height: @line-height-med;
+            }
+        }
+    }
+    .the {
+        &.content {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+/* [Dot Separator On Post Meta -- date and author name]
+-------------------------------------------------------------------*/
+.dot.separator {
+    .inlineDisplay();
+
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* [Author, Share and Tag Meta Styles]
+-------------------------------------------------------------------*/
+.in-post {
+    &.meta {
+        position: relative;
+        .meta {
+            &.content {
+                margin-top: 20px;
+
+                font-size: @body-fz-sm;
+                font-style: italic;
+                line-height: @line-height-base;
+            }
+            &.author {
+                p {
+                    margin-left: 60px;
+                }
+                .name {
+                    margin-left: 10px;
+                }
+            }
+        }
+        margin-bottom: 30px;
+        .author {
+            &.name {
+                .inlineDisplay();
+
+                margin-bottom: 5px;
+                margin-top: -5px;
+
+                color: @heading-color;
+                font-size: @body-fz-sm;
+                font-style: normal;
+                font-weight: 700;
+                white-space: nowrap;
+                a {
+                    color: @heading-color;
+                    &:hover {
+                        color: @default-accent;
+                    }
+                }
+            }
+        }
+        .taxonomy {
+            a {
+                margin-right: 5px;
+            }
+        }
+    }
+    .social {
+        a {
+            margin-right: 10px;
+            i {
+                font-size: 14px;
+            }
+        }
+    }
+    p {
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: @default-text;
+        &:hover {
+            color: @default-accent;
+        }
+    }
+}
+
+
+/* [Overriding Ghost Default Pagination Styles]
+-------------------------------------------------------------------*/
+.pagination {
+    display: block;
+
+    position: relative;
+
+    font-size: @body-fz-sm;
+
+    border-radius: 0px;
+
+    > a {
+        border: 1px solid lighten(@default-accent, 20%);
+
+        position: absolute;
+        top: 0px;
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        color: @default-background;
+        white-space: nowrap;
+
+        border-radius: @base-radius;
+
+        &:hover {
+            border-color: @invert-background;
+
+            color: @invert-background;
+        }
+
+        &.older-posts {
+            right: 0px;
+        }
+
+        &.newer-posts {
+            left: 0px;
+        }
+    }
+
+    .page-number {
+        color: lighten(@default-accent, 35%);
+    }
+}
+
+.pagination {
+    margin-bottom: 0px;
+    margin-top: 0px;
+
+    &.holder {
+        background-color: @default-accent;
+
+        padding: 50px 0;
+
+        color: @default-background;
+        text-align: center;
+        a.newer-posts {
+            left: 20px;
+            //*-----[Responsive 600++]-----*/
+            @media screen and (min-width: 600px) {
+                left: 50px;
+            }
+
+            //*-----[Responsive 768++]-----*/
+            @media screen and (min-width: 768px) {
+                left: 200px;
+            }
+        }
+        a.older-posts {
+            right: 20px;
+            //*-----[Responsive 600++]-----*/
+            @media screen and (min-width: 600px) {
+                right: 50px;
+            }
+
+            //*-----[Responsive 768++]-----*/
+            @media screen and (min-width: 768px) {
+                right: 200px;
+            }
+        }
+    }
+}
+
+/* [Overriding Disqus Thread Styles]
+-------------------------------------------------------------------*/
+#disqus_thread {
+    margin-top: 30px;
+}

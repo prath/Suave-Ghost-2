@@ -1,0 +1,57 @@
+{{!< default}}
+
+{{!-- Header & Navigations --}}
+<header role="banner">
+
+    {{!-- Logo & Nav --}}
+    {{> nav}}
+
+</header>
+
+<main id="wrapper">
+
+    {{!-- The Post --}}
+    {{#post}}
+    <article id="main-content-area" class="{{post_class}} container full" role="main">
+
+        {{!-- Post Header --}}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-3">
+
+                    {{!-- Post icon --}}
+                    <i class="post icon aecon-bookmark"></i>
+
+                    {{!-- Post Meta Top --}}
+                    <div class="post meta">&nbsp;</div>
+
+                    {{!-- Post Title --}}
+                    <header>
+                        <h1>{{{title}}}</h1>
+                    </header>
+
+                </div>
+            </div>
+        </div>
+
+        {{!-- Post Content --}}
+        <div class="post content">
+            <div class="container">
+                <div class="row">
+
+                    {{!-- The Content --}}
+                    <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-3 the content">
+                        {{content}}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </article>
+    {{/post}}
+
+</main>
+
+<!-- FOOTER-->
+{{> footer}}

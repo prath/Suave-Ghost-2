@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------
+// * [Table Styles]
+// * 
+// * @project Suave Ghost Theme
+// * @version 1.0.0
+// * 
+// * @author Dwi A. Hambali <dwi@aestik.com>
+// * @author Pratama H. Salahudin <pratama@aestik.com>
+// -----------------------------------------------------------------
+
+/* [Bootstrap Override]
+-------------------------------------------------------------------*/
+th, 
+td {
+    padding: 10px;
+}
+
+.table-bordered {
+    border: 1px solid lighten(@muted-color,30%);
+
+    thead,
+    tbody, 
+    tfoot {
+        > tr {
+            > th,
+            > td {
+                border: 1px solid lighten(@muted-color,30%);
+            }
+        }
+    }
+}
+
+table,
+.table {
+    thead {
+        > tr {
+            > th,
+            > td {
+                border-bottom: 2px solid lighten(@default-accent,20%);
+            }
+        }
+    }
+    tbody, 
+    tfoot {
+        > tr {
+            > th,
+            > td {
+                border-top: 1px solid lighten(@muted-color,30%);
+            }
+        }
+    }
+}
+
+.table-striped {
+    > tbody {
+        > tr:nth-child(odd) {
+            > td, 
+            > th {
+                background-color: @default-accent-muted;
+            }
+        }
+    }
+    tbody, 
+    tfoot {
+        > tr {
+            > th,
+            > td {
+                border-top: 1px solid lighten(@default-accent,30%);
+            }
+        }
+    }
+}
+
+.table-hover {
+    > tbody {
+        > tr:hover {
+            > td,
+            > th {
+                background-color: @default-accent-muted;
+            }
+        }
+    }
+}

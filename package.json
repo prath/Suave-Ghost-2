@@ -1,0 +1,28 @@
+{
+  "name": "suave-html",
+  "description": "HTML Skeleton for Suave WordPress Theme",
+  "version": "0.1.0",
+  "author": {
+    "name": "Pratama Hasriyan S.",
+    "email": "root@aestik.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/isaacs/npm.git"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-open": "*",
+    "grunt-dom-munger": "*",
+    "grunt-contrib-less": "*",
+    "autoprefixer": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-compress": "~0.5.2",
+    "grunt-markdown": "~0.4.0"
+  },
+  "keywords": []
+}

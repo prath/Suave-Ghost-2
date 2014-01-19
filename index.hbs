@@ -1,0 +1,67 @@
+{{!< default}}
+
+{{!-- Header & Navigations --}}
+<header role="banner">
+
+    {{!-- Logo & Nav --}}
+    {{> nav}}
+
+</header>
+
+<main id="wrapper" role="main">
+    
+    {{!-- Headline --}}
+    <div class="headline">
+        <div class="image covered" {{#if @blog.cover}}style="background-image: url({{@blog.cover}});"{{else}}style="background-image: url('/assets/images/suaveplaceholder.jpg');"{{/if}}>
+            <div class="container full">
+
+                {{!-- Output the first post on pagination --}}
+                {{#foreach posts}}
+                    {{#if @first}}
+                <article class="vertically centered hero unit">
+                    <header>
+
+                        {{!-- post date --}}
+                        <time class="post date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+
+                        {{!-- post title --}}
+                        <h1><a href="{{url}}">{{title}}</a></h1>
+
+                    </header>
+                </article>
+
+                {{!-- post read more --}}
+                <a href="{{url}}" class="btn btn-primary btn-lg btn-cta">Read More</a>
+                    {{/if}}
+                {{/foreach}}
+
+            </div>
+        </div>>
+    </div>{{!-- /Headline --}}
+
+    {{!-- Output the rest of the posts --}}
+    {{#foreach posts}}
+        {{#unless @first}}
+    <article class="{{post_class}} excerpt container">
+        <header>
+            <span class="badge">featured</span>
+            {{!-- post date --}}
+            <time class="post date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+
+            {{!-- post title --}}
+            <h2><a href="{{url}}">{{title}}</a></h2>
+
+        </header>
+    </article>
+        {{/unless}}
+    {{/foreach}}
+
+    {{!-- Output pagination --}}
+    <div class="pagination holder">
+        {{pagination}}
+    </div>
+
+</main>
+
+<!-- FOOTER-->
+{{> footer}}
