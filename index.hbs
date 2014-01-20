@@ -12,7 +12,7 @@
     
     {{!-- Headline --}}
     <div class="headline">
-        <div class="image covered" {{#if @blog.cover}}style="background-image: url({{@blog.cover}});"{{else}}style="background-image: url('/assets/images/suaveplaceholder.jpg');"{{/if}}>
+        <div class="image covered" {{#if @blog.cover}}style="background-image: url({{@blog.url}}{{@blog.cover}});"{{else}}style="background-image: url('{{@blog.url}}/assets/images/suaveplaceholder.jpg');"{{/if}}>
             <div class="container full">
 
                 {{!-- Output the first post on pagination --}}
