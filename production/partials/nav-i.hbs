@@ -3,7 +3,7 @@
         <div class="navbar-header">
 
             {{!-- Logo and Title --}}
-            <a href="{{@blog.url}}" class="navbar-brand">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="">{{/if}}{{@blog.title}}</a>
+            <a href="{{@blog.url}}" class="navbar-brand">{{#if @blog.logo}}<img src="{{@blog.url}}{{@blog.logo}}" alt="">{{/if}}{{@blog.title}}</a>
 
             {{!-- Blog description --}}
             {{#if @blog.description}}
@@ -29,10 +29,10 @@
                     </ul>
                     <ul role="menu" class="dropdown-menu">
                         <li role="presentation">
-                            <a href="http://suave-ghost.aestik.com/" role="menuitem">Home Page 1</a>
+                            <a href="http://demo.aestik.com/suave-ghost/def/" role="menuitem">Home Page 1</a>
                         </li>
                         <li role="presentation">
-                            <a href="http://suave-ghost-alt.aestik.com/" role="menuitem">Home Page 2</a>
+                            <a href="http://demo.aestik.com/suave-ghost/alt/" role="menuitem">Home Page 2</a>
                         </li>
                     </ul>
                 </li>{{!-- end [HOME PAGES SWITCHER MENU] --}}

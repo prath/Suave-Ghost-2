@@ -11,7 +11,7 @@
 <main id="wrapper">
 
     {{!-- Headline --}}
-    <div {{#if @blog.cover}}style="background-image: url({{@blog.cover}});"{{else}}style="background-image: url('/assets/images/suaveplaceholder.jpg');"{{/if}} class="headline image covered">
+    <div {{#if @blog.cover}}style="background-image: url({{@blog.url}}{{@blog.cover}});"{{else}}style="background-image: url('{{@blog.url}}/assets/images/suaveplaceholder.jpg');"{{/if}} class="headline image covered">
         <div class="container full" role="main">
 
             {{!-- Output the first post --}}
