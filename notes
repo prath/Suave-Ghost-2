@@ -1,5 +1,6 @@
 [must updates]
-- update doc
+
+
 
 [future]
 - cover image/featured image on post page.
@@ -13,4 +14,13 @@
 - author info [DONE]
 - static page (page.hbs) [DONE]
 - menu untuk static page (harus hardcode) [DONE]
+- update doc
+    remove info untuk disquss[done]
+    klo buat static page misal about us ga jalan, restart ghost. aneh tapi it fixed. [done]
+    buat doc ttg membuat static page dan buat menunya. [done]
+- test theme di installan clean[DONE]
+- generate skin css [DONE]
+
+
+disquss : var disqus_shortname = 'suaveghostaestik';
 

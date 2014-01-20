@@ -1,0 +1,40 @@
+{{!< default}}
+
+{{!-- Header & Navigations --}}
+<header role="banner">
+
+    {{!-- Logo & Nav --}}
+    {{> nav-i}}
+
+</header>
+
+<main id="wrapper">
+
+    {{!-- Headline --}}
+    <div {{#if @blog.cover}}style="background-image: url({{@blog.cover}});"{{else}}style="background-image: url('/assets/images/suaveplaceholder.jpg');"{{/if}} class="headline image covered">
+        <div class="container full" role="main">
+
+            {{!-- Output the first post --}}
+            {{#foreach posts}}
+                {{#if @first}}
+            <article class="vertically centered hero unit">
+                <header>
+
+                    {{!-- post date --}}
+                    <time class="post date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+
+                    {{!-- post title --}}
+                    <h1><a href="{{url}}">{{title}}</a></h1>{{!-- /post title --}}
+
+                </header>
+            </article>
+
+            {{!-- post read more --}}
+            <a href="{{url}}" class="btn btn-primary btn-lg btn-cta">Read More</a>
+                {{/if}}
+            {{/foreach}}
+
+        </div>
+    </div>
+
+</main>
